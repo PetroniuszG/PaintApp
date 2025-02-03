@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor">
+
+    <RelativeLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+
+            <ImageButton
+                android:layout_margin="10dp"
+                android:id="@+id/color_picker_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/paleta"
+                android:contentDescription="@string/cpDesc"
+                android:background="@drawable/rounded1"
+                android:scaleType="fitCenter"
+                />
+
+            <ImageButton
+                android:id="@+id/brush_style_button"
+                android:layout_toEndOf="@id/color_picker_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded1"
+                android:contentDescription="@string/bStyleDesc"
+                android:scaleType="fitCenter"
+                android:src="@drawable/style" />
+
+            <ImageButton
+                android:layout_margin="10dp"
+                android:id="@+id/brush_size_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toEndOf="@id/brush_style_button"
+                android:background="@drawable/rounded1"
+                android:src="@drawable/size"
+                android:contentDescription="@string/bSizeDesc"
+                android:scaleType="fitCenter"/>
+
+
+            <ImageButton
+                android:layout_margin="10dp"
+                android:id="@+id/shape_picker_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/figures"
+                android:layout_toEndOf="@id/brush_size_button"
+                android:contentDescription="@string/sPickerDesc"
+                android:background="@drawable/rounded1"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:layout_margin="10dp"
+                android:id="@+id/undo_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/undo"
+                android:layout_toEndOf="@id/shape_picker_button"
+                android:contentDescription="@string/undoDesc"
+                android:background="@drawable/rounded1"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:layout_margin="10dp"
+                android:id="@+id/redo_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/undoreversed"
+                android:layout_toEndOf="@id/undo_button"
+                android:contentDescription="@string/redoDesc"
+                android:background="@drawable/rounded1"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <!-- Widok rysunkowy, z tłem jasnoszarym i odpowiednią wysokością -->
+    <com.example.paintapp.DrawingView
+        android:id="@+id/drawing_view"
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        android:layout_below="@id/navbar"
+        android:layout_margin="10dp"
+        android:background="#F2F0EA" />
+
+    <RelativeLayout
+        android:id="@+id/botbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drawing_view"
+        android:layout_margin="10dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+        <ImageButton
+            android:id="@+id/save_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded1"
+            android:contentDescription="@string/saveDesc"
+            android:scaleType="fitCenter"
+            android:src="@drawable/save" />
+        <ImageButton
+            android:id="@+id/readFF_button"
+            android:layout_toEndOf="@id/save_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded1"
+            android:contentDescription="@string/importDesc"
+            android:scaleType="fitCenter"
+            android:src="@drawable/impo" />
+            <ImageButton
+                android:layout_margin="10dp"
+                android:id="@+id/clear_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toEndOf="@id/readFF_button"
+                android:background="@drawable/rounded1"
+                android:src="@drawable/wyczysc"
+                android:contentDescription="@string/clearDesc"
+                android:scaleType="fitCenter"/>
+            <ImageButton
+                android:id="@+id/eraser_button"
+                android:layout_toEndOf="@id/clear_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded1"
+                android:contentDescription="@string/eraserDesc"
+                android:scaleType="fitCenter"
+                android:src="@drawable/gumka" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

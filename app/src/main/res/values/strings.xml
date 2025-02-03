@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PaintApp</string>
+    <string name="cpDesc">Wybór koloru</string>
+    <string name="clearDesc">Wyczyść rysunek</string>
+    <string name="bSizeDesc">Zmiana grubości pędzla</string>
+    <string name="sPickerDesc">Wybór kształtu</string>
+    <string name="undoDesc">Cofnij</string>
+    <string name="redoDesc">Wróć</string>
+    <string name="saveDesc">Zapisz do pliku</string>
+    <string name="importDesc">Wczytaj plik</string>
+    <string name="eraserDesc">Gumka</string>
+    <string name="bStyleDesc">Styl pędzla</string>"
+</resources>
