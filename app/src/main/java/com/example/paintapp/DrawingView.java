@@ -10,7 +10,7 @@
  * Wczytanie - wczytanie zdjęcia do drawingView.
  * Krzyżyk - czyszczenie rysunku.
  * Gumka - rysowanie w kolorze tła rysunku, co daje efekt "gumki".
- * @author Jakub Prabucki
+ * @author PetroniuszG
  * @version 1.0
  */
 package com.example.paintapp;
